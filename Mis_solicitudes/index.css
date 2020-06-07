@@ -1,0 +1,122 @@
+@import "../index.css";
+.inicio
+{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+.barra 
+{
+    margin: 0;
+    padding: 0;
+    top: 0%;
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    background: rgba(255, 255, 255, 0.9);
+
+}
+ .barra > img
+{
+    padding-left: 1%;
+    height: 100%;
+    opacity: 60%;
+}
+.barra > h1
+{
+    margin: 0;
+    margin-left: 1%;
+    position: absolute;
+    top: 30%;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    color: #000000;
+}
+.barraDeBotones
+{
+    margin-left: 1%;
+    position: absolute;
+    width: 98%;
+    height: 15%;
+    left: 0px;
+    top: 20%;
+    background: #FEFEFF;
+    opacity: 0.9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.barraDeBotones > #nueva_solicitud:hover
+{
+    background-color: khaki;
+    transition: 1s;
+    font-size: 125%;
+    
+}
+.barraDeBotones > #modificar_solicitud:hover
+{
+    background-color: khaki;
+    transition: 1s;
+    font-size: 125%;
+}
+.barraDeBotones > #eliminar_solicitud:hover
+{
+    background-color: khaki;
+    transition: 1s;
+    font-size: 125%;
+}
+.barraDeBotones > button
+{
+    width: 15%;
+    height: 60%;
+    margin-left: 13%;
+    margin-top: 1%;
+    background-color: red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+.barraDeBotones > #nueva_solicitud
+{
+    background: #7EA2FE;  
+}
+.barraDeBotones > #modificar_solicitud
+{
+    background: #94FF79;
+}
+.barraDeBotones > #eliminar_solicitud
+{
+    background: #FF6C6C;
+}
+.tablaSolicitudes
+{
+    margin-left: 1%;
+    top: 38%;
+    position: absolute;
+    width: 98%;
+    height: 60%;
+    background: #FEFEFF;
+    opacity: 0.9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.tablaSolicitudes > img
+{
+    position: absolute;
+    width: 30%;
+    height: 80%;
+    margin-top: 4%;
+    margin-left: 36%;
+    opacity: 15%;
+    border-radius: 0px 0px 200px 200px;
+    
+}
+table
+
+{
+   width: 100%;
+   font-size: 150%;
+   font-family: 'Times New Roman', Times, serif;
+}
+

@@ -1,4 +1,5 @@
 function validar(){
+     
     var usuario = document.getElementById("usuario").value;
     var contraseña = document.getElementById("contraseña").value;
     var soloDigitos = /[0-9]+/;
@@ -24,4 +25,6 @@ function validar(){
         alert("El usuario debe ser un Dni('8 digitos)");
         return false;
     }
+    return document.getElementById("myForm").action = "Mis_solicitudes/index.html";
 }
+
