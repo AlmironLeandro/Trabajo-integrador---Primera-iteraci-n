@@ -3,7 +3,7 @@
 var datosFrontEnd = document.querySelector("#datos_atraer");
 
 function traer(){
-      fetch("index.json")
+      fetch('index.json')
       .then(res => res.json())
         .then(datos =>
             {
