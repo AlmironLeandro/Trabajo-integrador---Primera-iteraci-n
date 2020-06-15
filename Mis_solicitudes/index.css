@@ -1,4 +1,4 @@
-@import "../index.css";
+@import "../Login/index.css";
 .inicio
 {
     position: absolute;
@@ -113,10 +113,15 @@
     
 }
 table
-
 {
    width: 100%;
    font-size: 150%;
    font-family: 'Times New Roman', Times, serif;
 }
 
+tbody > tr {
+    font-size: 50%;  
+}
+.primer {
+    text-align: justify;
+}

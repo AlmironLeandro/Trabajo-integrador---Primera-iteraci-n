@@ -25,6 +25,7 @@ function validar(){
         alert("El usuario debe ser un Dni('8 digitos)");
         return false;
     }
+//ToDo podrias reemplazar la linea 29 por una funcion que te devuelva validar() y te retorne mis solicitudes.
     return document.getElementById("myForm").action = "Mis_solicitudes/index.html";
 }
 

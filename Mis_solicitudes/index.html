@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="table.css">
+
     <title>Crear solicitud/modificar</title>
 </head>
-<body>
+<body >
     <img class="inicio" src="../imagenes/background.jpeg">
     <div class="barra">
         <img src="../imagenes/0.png">
@@ -21,17 +21,26 @@
     </div>
     <div class="tablaSolicitudes">
         <img src="../imagenes/0.png">
-        <table>
-            <tr>
-                <th>Descripcion</th>
-                <th>Estado</th>
-                <th>Fecha de emision</th>
-            </tr>            
+        <table id="tablaSolicitudes">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Estado</th>
+                    <th>Fecha de emision</th>
+                </tr>  
+            </thead>  
+            <tbody id="datos_atraer">
+                <tr>
+                    <th class="primer">Descripcion</th>
+                    <th>Estado</th>
+                    <th>Fecha de emision</th>
+                </tr>  
+            </tbody>        
         </table>
     <!--Descripcion
         Estado
         Fecha de emision-->
     </div>
-    
+    <script src="index.js"></script>
 </body>
 </html>
