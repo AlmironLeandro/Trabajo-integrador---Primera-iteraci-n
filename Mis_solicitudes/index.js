@@ -17,8 +17,8 @@ function tabla(datos)
         datosFrontEnd.innerHTML +=
         `
         <tr>
-            <th class="primer">${valor.descripcion}</th>
-            <th>${valor.estado}</th>
+            <th class="primer">${valor.Descripción}</th>
+            <th>${valor.Estado}</th>
             <th>${valor.Fecha}</th>
          </tr>  
         
