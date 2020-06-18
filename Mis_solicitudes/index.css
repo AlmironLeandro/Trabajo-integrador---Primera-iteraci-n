@@ -1,4 +1,4 @@
-@import "../Login/index.css";
+@import "../index.css";
 .inicio
 {
     position: absolute;
@@ -124,4 +124,24 @@ tbody > tr {
 }
 .primer {
     text-align: justify;
+}
+.salir
+{
+    font-size: 120%;
+    position: absolute;
+    width: 8%;
+    height:50%;
+    left: 90%;
+    top: 18%;
+    background: #C4C4C4;
+    border-radius: 10px;
+}
+#enviar
+{
+    background: rgba(5, 0, 255, 0.6);
+    border-radius: 10px;
+    top: 82%;
+    width: 10%;
+    height:10% ;
+    left: 42%;
 }

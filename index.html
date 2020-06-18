@@ -2,20 +2,20 @@
     <head>
         <link rel="stylesheet"  href="index.css">
         <link rel='stylesheet' media='screen and (max-width: 700px) ' href='media.css' />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="index.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
     </head>
     <body>
-        <img class="inicio" src="../imagenes/background.jpeg">
+        <img class="inicio" src="imagenes/background.jpeg">
         <div id="square_login">
-            <img id="Background_unahur" src="../imagenes/0.png">
-            <form id="myForm" onsubmit="validar()">
+            <img id="Background_unahur" src="imagenes/0.png">
+            <form id="myForm" >
                 <input id="usuario" type="text" placeholder="Usuario" >
-                <input id="contraseña" type="password" placeholder="Contraseña" >
+                <input class="contraseña" id="contraseña" type="password" placeholder="Contraseña" >
                 <a id="contraseñaPerdida" href="#">Olvidaste tu contraseña?</a>
                 <input id="enviar" type="submit" value="Entrar">
-                <a id="registrar" href="#">No tenes cuenta? <span>Registrate</span></a>
+                <a id="registrar" href="Login/Registration/registration.html">No tenes cuenta? <span>Registrate</span></a>
             </form>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>

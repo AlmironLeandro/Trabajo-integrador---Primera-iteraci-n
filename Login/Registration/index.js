@@ -1,7 +1,10 @@
-document.getElementById("myForm").onsubmit = function() {isUsuarioAceptado()};
+document.getElementById("myFormRegistration").onsubmit = function() {validarUsuario()};
+
+
 function validarUsuario(){ 
     var usuario = document.getElementById("usuario").value;
     var contraseña = document.getElementById("contraseña").value;
+    var contraseñaRepeat = document.getElementById("contraseñaRepeat").value;
     var soloDigitos = /[0-9]+/;
     var caracteres = /[a-zA-Z]+/;
         if(usuario.nodeValue ===""|| contraseña ===""){
@@ -24,18 +27,21 @@ function validarUsuario(){
             alert("El usuario debe ser un Dni('8 digitos)");
             return false;
         }
+        else if (!(contraseña == contraseñaRepeat)){
+            alert("La contraseñas no coinciden")
+            return false;
+        }
         else 
         {
             return true;
         }
 }
-
-function isUsuarioAceptado(){
-    if(validarUsuario()){
-            return  document.getElementById("myForm").action = "Mis_solicitudes/index.html" 
-    }
-    else
+function usuarioRegistrado()
+{
+    if(validarUsuario())
     {
-        alert("Usuario no aceptado");
+        //ToDo tenes que convertir los datos JavaScript en Json y hacer un push a un archivo Json, de esta forma 
+        // vas a tener una "Base de datos en donde son alojados los usuarios para validar luego"
     }
 }
+
