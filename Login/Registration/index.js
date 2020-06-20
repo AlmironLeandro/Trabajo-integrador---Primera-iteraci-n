@@ -44,7 +44,7 @@ function usuarioRegistrado()
         var usuario = document.getElementById("usuario").value;
         var contraseña = document.getElementById("contraseña").value;
         var usuarioCompleto = {usuario,contraseña}
-       usuarioGuardado.push(usuarioCompleto)
+       usuarioGuardado.push(usuarioCompleto.usuario,usuarioCompleto.contraseña)
                 alert("Usuario creado!")
                 alert(usuarioGuardado)
         //ToDo tenes que convertir los datos JavaScript en Json y hacer un push a un archivo Json, de esta forma 
