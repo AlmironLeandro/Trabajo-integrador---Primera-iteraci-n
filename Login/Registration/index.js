@@ -1,10 +1,11 @@
-document.getElementById("myFormRegistration").onsubmit = function() {validarUsuario()};
-
+document.getElementById("myFormRegistration").onsubmit = function() {usuarioRegistrado()};
+var usuarioGuardado =["leandro"]
 
 function validarUsuario(){ 
     var usuario = document.getElementById("usuario").value;
     var contraseña = document.getElementById("contraseña").value;
     var contraseñaRepeat = document.getElementById("contraseñaRepeat").value;
+    var myFormRegistration = document.getElementById("myFormRegistration");
     var soloDigitos = /[0-9]+/;
     var caracteres = /[a-zA-Z]+/;
         if(usuario.nodeValue ===""|| contraseña ===""){
@@ -40,6 +41,12 @@ function usuarioRegistrado()
 {
     if(validarUsuario())
     {
+        var usuario = document.getElementById("usuario").value;
+        var contraseña = document.getElementById("contraseña").value;
+        var usuarioCompleto = {usuario,contraseña}
+       usuarioGuardado.push(usuarioCompleto)
+                alert("Usuario creado!")
+                alert(usuarioGuardado)
         //ToDo tenes que convertir los datos JavaScript en Json y hacer un push a un archivo Json, de esta forma 
         // vas a tener una "Base de datos en donde son alojados los usuarios para validar luego"
     }
