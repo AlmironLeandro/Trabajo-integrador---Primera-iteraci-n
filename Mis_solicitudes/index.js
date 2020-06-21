@@ -10,14 +10,9 @@ var varEliminarSolicitud = eliminarSolicitudes();
 function eliminarSolicitudes(){
     eliminarSolicitud.addEventListener("click", function(){
     var checkboxes = document.getElementsByName('check')
-    var contador=0;
+    
     checkboxes.forEach((item) => {
-        if (item.checked) {document.getElementById(contador).innerHTML=``;alert(contador)}
-        else
-        {
-            contador++;
-        }
-        
+        if (item.checked) {document.getElementById(item.id).innerHTML=``;alert(contador)} 
     })
 })}
 
@@ -51,7 +46,7 @@ function tabla(datos)
             <th class="primer">${valor.Descripción}</th>
             <th>${valor.Estado}</th>
             <th>${valor.Fecha}</th>
-            <th><input type="checkbox" name="check" onclick="onlyOne(this)"></th>
+            <th><input type="checkbox" id="${contadorS} name="check" onclick="onlyOne(this)"></th>
          </tr>  
         `
         contadorS++;
