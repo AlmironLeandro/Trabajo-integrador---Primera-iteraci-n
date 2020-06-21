@@ -5,7 +5,7 @@ var nueva_solicitud = document.getElementById("nueva_solicitud");
 var nuevaSolicitud = nuevaSolicitud();
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
-var usuario = {}
+var varEliminarSolicitud = eliminarSolicitud()
 
 function eliminarSolicitud(){
     eliminarSolicitud.addEventListener("click", function(){
@@ -49,11 +49,7 @@ function tabla(datos)
             <th>${valor.Fecha}</th>
             <input type="checkbox" name="check" onclick="onlyOne(this)">
          </tr>  
-        
         `
         contador++;
-        
-        
-       
     }
 }

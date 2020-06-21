@@ -1,6 +1,5 @@
 document.getElementById("myFormRegistration").onsubmit = function() {usuarioRegistrado()};
 let usuarioGuardado =Array();
-usuarioGuardado.push("leandro");
 
 function validarUsuario(){ 
     var usuario = document.getElementById("usuario").value;
