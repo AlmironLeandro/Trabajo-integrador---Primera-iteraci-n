@@ -146,7 +146,7 @@ tbody > tr {
     height:10% ;
     left: 42%;
 }
-tbody > th
+tbody > input
 {
- display: block;   
+ display: inline-block; 
 }
