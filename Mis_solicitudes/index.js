@@ -3,7 +3,7 @@
 var datosFrontEnd = document.querySelector("#datos_atraer");
 var nueva_solicitud = document.getElementById("nueva_solicitud");
 var nuevaSolicitud = nuevaSolicitud();
-// var checkbox = document.querySelectorAll('input[type=checkbox]'); 
+var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
 var varEliminarSolicitud = eliminarSolicitudes();
 
