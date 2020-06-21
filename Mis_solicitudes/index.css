@@ -114,8 +114,7 @@
 }
 table
 {
-    background-color: red;
-   width: 95%;
+   width: 100%;
    font-size: 150%;
    font-family: 'Times New Roman', Times, serif;
 }
@@ -148,5 +147,5 @@ tbody > tr {
 }
 tbody > input
 {
- display: inline-block; 
+    
 }
