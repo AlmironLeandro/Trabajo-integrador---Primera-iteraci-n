@@ -49,6 +49,7 @@ function usuarioRegistrado()
                 alert(usuarioGuardado)
         //ToDo tenes que convertir los datos JavaScript en Json y hacer un push a un archivo Json, de esta forma 
         // vas a tener una "Base de datos en donde son alojados los usuarios para validar luego"
+        // Json no funciona asi... -.-""   ---> solo funciona como intermediario al parecer :S
     }
 }
 

@@ -4,8 +4,25 @@ var datosFrontEnd = document.querySelector("#datos_atraer");
 var nueva_solicitud = document.getElementById("nueva_solicitud");
 var nuevaSolicitud = nuevaSolicitud();
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
-//Verificar CheckBox ToDo
+var eliminarSolicitud = document.getElementById("eliminar_solicitud");
+var checkboxNumero = document.getElementById({contador});
 
+function eliminarSolicitud(){
+    eliminarSolicitud.addEventListener("click", function(){
+    var checkboxes = document.getElementsByName('check')
+    var contador=0;
+    checkboxes.forEach((item) => {
+        if (item.checked == true) {document.getElementById(contador).innerHTML=``}
+        contador++;
+    })
+})}
+
+function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('check')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
 function nuevaSolicitud(){
     nueva_solicitud.addEventListener("click", function(){
         window.location = "nueva_solicitud/index.html"
@@ -24,13 +41,19 @@ function tabla(datos)
     datosFrontEnd.innerHTML = ''
     for (let valor of datos) {
         datosFrontEnd.innerHTML +=
+        console.log(contador)
         `
-        <tr>
+        <tr id="${contador}">
             <th class="primer">${valor.Descripción}</th>
             <th>${valor.Estado}</th>
             <th>${valor.Fecha}</th>
+            <input type="checkbox" name="check" onclick="onlyOne(this)">
          </tr>  
         
         `
+        contador++;
+        
+        
+       
     }
 }
