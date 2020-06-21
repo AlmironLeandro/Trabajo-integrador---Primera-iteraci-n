@@ -3,17 +3,17 @@
 var datosFrontEnd = document.querySelector("#datos_atraer");
 var nueva_solicitud = document.getElementById("nueva_solicitud");
 var nuevaSolicitud = nuevaSolicitud();
-var checkbox = document.querySelectorAll('input[type=checkbox]'); 
+// var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
-var varEliminarSolicitud = eliminarSolicitudes();
+// var varEliminarSolicitud = eliminarSolicitudes();
 
-function eliminarSolicitudes(){
-    eliminarSolicitud.addEventListener("click", function(){
-    var checkboxes = document.getElementsByName('check')
-    checkboxes.forEach((item) => {
-        if (item.checked) { var moveToCheckBox =document.getElementById(item.getAttributeNode("class").value);moveToCheckBox.innerHTML=``;alert(`Eliminado: ${moveToCheckBox.ATTRIBUTE_NODE}`)} 
-    })
-})}
+// function eliminarSolicitudes(){
+//     eliminarSolicitud.addEventListener("click", function(){
+//     var checkboxes = document.getElementsByName('check')
+//     checkboxes.forEach((item) => {
+//         if (item.checked) { var moveToCheckBox =document.getElementById(item.getAttributeNode("class").value);moveToCheckBox.innerHTML=``;alert(`Eliminado: ${moveToCheckBox.ATTRIBUTE_NODE}`)} 
+//     })
+// })}
 
 function onlyOne(checkbox) {
     var checkboxes = document.getElementsByName('check')
