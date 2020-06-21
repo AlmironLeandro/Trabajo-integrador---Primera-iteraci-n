@@ -11,7 +11,7 @@ function eliminarSolicitudes(){
     eliminarSolicitud.addEventListener("click", function(){
     var checkboxes = document.getElementsByName('check')
     checkboxes.forEach((item) => {
-        if (item.checked) { var moveToCheckBox =document.getElementById(item.getAttributeNode("class").value);moveToCheckBox.innerHTML=``;alert(`Eliminado: ${moveToCheckBox.ATTRIBUTE_NODE}`)} 
+        if (item.checked) {document.getElementById(item.getAttributeNode("class").value).innerHTML=``;alert(`Eliminado`)} 
     })
 })}
 
@@ -37,7 +37,6 @@ function traer(){
 function tabla(datos)
 {
     var contadorS =0;
-    datosFrontEnd.innerHTML = ''
     for (let valor of datos) {
         datosFrontEnd.innerHTML +=
         `
