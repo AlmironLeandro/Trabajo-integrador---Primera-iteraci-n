@@ -6,11 +6,11 @@ var nuevaSolicitud = nuevaSolicitud();
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
 var varEliminarSolicitud = eliminarSolicitudes();
-
+var contador=0;
 function eliminarSolicitudes(){
     eliminarSolicitud.addEventListener("click", function(){
     var checkboxes = document.getElementsByName('check')
-    var contador=0;
+    
     checkboxes.forEach((item) => {
         if (item.checked) {document.getElementById(contador).innerHTML=``;alert(contador)}
         
