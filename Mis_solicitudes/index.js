@@ -46,8 +46,7 @@ function tabla(datos)
         <tr id="${contador}">
             <th class="primer">${valor.Descripción}</th>
             <th>${valor.Estado}</th>
-            <th>${valor.Fecha}</th>
-            <input type="checkbox" name="check" onclick="onlyOne(this)">
+            <th>${valor.Fecha}</th><input type="checkbox" name="check" onclick="onlyOne(this)">
          </tr>  
         `
         contador++;
