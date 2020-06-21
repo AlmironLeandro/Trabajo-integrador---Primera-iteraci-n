@@ -7,7 +7,7 @@ var checkbox = document.querySelectorAll('input[type=checkbox]');
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
 var varEliminarSolicitud = eliminarSolicitud();
 
-function eliminarSolicitud(){
+function eliminarSolicitudes(){
     eliminarSolicitud.addEventListener("click", function(){
     var checkboxes = document.getElementsByName('check')
     var contador=0;
