@@ -39,18 +39,18 @@ function traer(){
 }
 function tabla(datos)
 {
-    var contador =0;
+    var contadorS =0;
     datosFrontEnd.innerHTML = ''
     for (let valor of datos) {
         datosFrontEnd.innerHTML +=
         `
-        <tr id="${contador}">
+        <tr id="${contadorS}">
             <th class="primer">${valor.Descripción}</th>
             <th>${valor.Estado}</th>
             <th>${valor.Fecha}</th>
             <th><input type="checkbox" name="check" onclick="onlyOne(this)"></th>
          </tr>  
         `
-        contador++;
+        contadorS++;
     }
 }
