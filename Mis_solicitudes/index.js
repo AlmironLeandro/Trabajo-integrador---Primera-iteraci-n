@@ -12,7 +12,8 @@ function eliminarSolicitudes(){
     var checkboxes = document.getElementsByName('check')
     var contador=0;
     checkboxes.forEach((item) => {
-        if (item.checked == true) {document.getElementById(contador).innerHTML=``}
+        if (item.checked) {document.getElementById(contador).innerHTML=``;alert(contador)}
+        
         contador++;
     })
 })}
