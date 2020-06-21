@@ -5,6 +5,7 @@ var nueva_solicitud = document.getElementById("nueva_solicitud");
 var nuevaSolicitud = nuevaSolicitud();
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
+var usuario = {}
 
 function eliminarSolicitud(){
     eliminarSolicitud.addEventListener("click", function(){
@@ -41,7 +42,6 @@ function tabla(datos)
     datosFrontEnd.innerHTML = ''
     for (let valor of datos) {
         datosFrontEnd.innerHTML +=
-        console.log(contador)
         `
         <tr id="${contador}">
             <th class="primer">${valor.Descripción}</th>

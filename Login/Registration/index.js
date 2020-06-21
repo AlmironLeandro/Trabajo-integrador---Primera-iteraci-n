@@ -1,5 +1,6 @@
 document.getElementById("myFormRegistration").onsubmit = function() {usuarioRegistrado()};
-let usuarioGuardado =["leandro"]
+let usuarioGuardado =Array();
+usuarioGuardado.push("leandro");
 
 function validarUsuario(){ 
     var usuario = document.getElementById("usuario").value;
@@ -44,7 +45,7 @@ function usuarioRegistrado()
         var usuario = document.getElementById("usuario").value;
         var contraseña = document.getElementById("contraseña").value;
         var usuarioCompleto = {usuario,contraseña}
-       usuarioGuardado.push("pepe")
+       usuarioGuardado.push(usuarioCompleto)
                 alert("Usuario creado!")
                 alert(usuarioGuardado)
         //ToDo tenes que convertir los datos JavaScript en Json y hacer un push a un archivo Json, de esta forma 
