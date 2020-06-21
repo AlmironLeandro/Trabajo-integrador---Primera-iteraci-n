@@ -5,7 +5,6 @@ var nueva_solicitud = document.getElementById("nueva_solicitud");
 var nuevaSolicitud = nuevaSolicitud();
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
-var checkboxNumero = document.getElementById({contador});
 
 function eliminarSolicitud(){
     eliminarSolicitud.addEventListener("click", function(){
@@ -38,6 +37,7 @@ function traer(){
 }
 function tabla(datos)
 {
+    var contador =0;
     datosFrontEnd.innerHTML = ''
     for (let valor of datos) {
         datosFrontEnd.innerHTML +=
