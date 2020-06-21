@@ -13,8 +13,11 @@ function eliminarSolicitudes(){
     
     checkboxes.forEach((item) => {
         if (item.checked) {document.getElementById(contador).innerHTML=``;alert(contador)}
+        else
+        {
+            contador++;
+        }
         
-        contador++;
     })
 })}
 
