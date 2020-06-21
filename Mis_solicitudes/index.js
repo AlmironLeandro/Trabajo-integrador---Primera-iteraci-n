@@ -10,10 +10,8 @@ var varEliminarSolicitud = eliminarSolicitudes();
 function eliminarSolicitudes(){
     eliminarSolicitud.addEventListener("click", function(){
     var checkboxes = document.getElementsByName('check')
-    
     checkboxes.forEach((item) => {
-        
-        if (item.checked) {document.getElementById(item.getAttributeNode("class").value).innerHTML=``;alert(contador)} 
+        if (item.checked) { var moveToCheckBox =document.getElementById(item.getAttributeNode("class").value);moveToCheckBox.innerHTML=``;alert(`Eliminado: ${moveToCheckBox.ATTRIBUTE_NODE}`)} 
     })
 })}
 
