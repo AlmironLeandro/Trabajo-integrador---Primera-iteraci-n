@@ -6,12 +6,40 @@ var nuevaSolicitud = nuevaSolicitud();
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
 var varEliminarSolicitud = eliminarSolicitudes();
+var modificarSolicitud = document.getElementById("modificar_solicitud");
+var botonEnviar = document.getElementById("enviar");
+var asd = modificarSolicitudes();
+var menu = document.querySelector(".menuDesplegable");
+
+
+
+function modificarSolicitudes(){
+    modificarSolicitud.addEventListener("click", function(){
+        var checkboxes = document.getElementsByName('check');
+        for(i=0;i< checkboxes.length; i++){
+            let contadorTh = 7+i;
+            if (checkboxes[i].checked) {
+                menu.classList.toggle("menuDesplegable");
+               console.log(document.getElementById(`${(contadorTh)}`));
+                    botonEnviar.addEventListener("click",function()
+                    {
+                        document.getElementById(`${(contadorTh)}`).innerHTML = `${document.getElementById("textoSolicitud").value}`;
+                    });
+                    
+             
+                }  
+        }
+        
+    })
+    
+}
 
 function eliminarSolicitudes(){
     eliminarSolicitud.addEventListener("click", function(){
     var checkboxes = document.getElementsByName('check')
     checkboxes.forEach((item) => {
-        if (item.checked) {document.getElementById(item.getAttributeNode("class").value).innerHTML=``} 
+        if (item.checked) {
+            document.getElementById(item.getAttributeNode("class").value).innerHTML=``} 
     })
 })}
 
@@ -36,17 +64,21 @@ function traer(){
 }
 function tabla(datos)
 {
-    var contadorS =0;
+
+    
+    var contadorTr =0;
+    var contadorTh = 7;
     for (let valor of datos) {
         datosFrontEnd.innerHTML +=
         `
-        <tr id="${contadorS}">
-            <th class="primer">${valor.Descripción}</th>
+        <tr id="${contadorTr}">
+            <th id="${contadorTh}"  class="primer">${valor.Descripción}</th>
             <th>${valor.Estado}</th>
             <th>${valor.Fecha}</th>
-            <th><input type="checkbox" class="${contadorS}" name="check" onclick="onlyOne(this)"></th>
+            <th><input type="checkbox" class="${contadorTr}" name="check" onclick="onlyOne(this)"></th>
          </tr>  
         `
-        contadorS++;
+        contadorTh++;
+        contadorTr++;
     }
 }

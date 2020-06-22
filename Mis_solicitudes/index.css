@@ -1,4 +1,6 @@
 @import "../index.css";
+
+
 .inicio
 {
     position: absolute;
@@ -145,7 +147,19 @@ tbody > tr {
     height:10% ;
     left: 42%;
 }
-tbody > input
+textarea
 {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    left: 20%;
+    box-shadow: none;
+}
+.menuDesplegable 
+{
+   
+        pointer-events: none;
+        opacity: 0.0;
+    
     
 }
