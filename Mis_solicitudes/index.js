@@ -64,8 +64,6 @@ function traer(){
 }
 function tabla(datos)
 {
-
-    
     var contadorTr =0;
     var contadorTh = 7;
     for (let valor of datos) {
