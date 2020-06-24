@@ -5,43 +5,36 @@ var nueva_solicitud = document.getElementById("nueva_solicitud");
 var nuevaSolicitud = nuevaSolicitud();
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
-var varEliminarSolicitud = eliminarSolicitudes();
-var modificarSolicitud = document.getElementById("modificar_solicitud");
 var botonEnviar = document.getElementById("enviar");
-var asd = modificarSolicitudes();
 var menu = document.querySelector(".menuDesplegable");
 
-
-
-function modificarSolicitudes(){
-    modificarSolicitud.addEventListener("click", function(){
-        var checkboxes = document.getElementsByName('check');
-        for(i=0;i< checkboxes.length; i++){
-            let contadorTh = 7+i;
-            if (checkboxes[i].checked) {
-                menu.classList.toggle("menuDesplegable");
-               console.log(document.getElementById(`${(contadorTh)}`));
-                    botonEnviar.addEventListener("click",function()
-                    {
-                        document.getElementById(`${(contadorTh)}`).innerHTML = `${document.getElementById("textoSolicitud").value}`;
-                    });
-                    
-             
-                }  
-        }
-        
-    })
-    
+function botonEliminar()
+{
+    var checkboxes = document.getElementsByName('check');
+    for (let i = 0; i <  checkboxes.length; i++) {
+        var filas = document.getElementsByName('filas');
+        if(checkboxes[i].checked)
+            {
+                filas[i].remove();
+            }
+    }
 }
-
-function eliminarSolicitudes(){
-    eliminarSolicitud.addEventListener("click", function(){
-    var checkboxes = document.getElementsByName('check')
-    checkboxes.forEach((item) => {
-        if (item.checked) {
-            document.getElementById(item.getAttributeNode("class").value).innerHTML=``} 
-    })
-})}
+ function modificarSolicitudes()
+{
+    var checkboxes = document.getElementsByName('check');
+    for (let i = 0; i <  checkboxes.length; i++) {
+        var descripcion = document.getElementsByName('descripcion');
+        if(checkboxes[i].checked)
+            {
+                menu.classList.toggle("menuDesplegable")
+                let texto = document.getElementById("textoSolicitud").value;
+                botonEnviar.addEventListener("click", 
+                function(){ 
+                    {(descripcion[i].innerHTML=`${texto}`)} 
+                    menu.classList.toggle("menuDesplegable")})
+            }
+    }
+}
 
 function onlyOne(checkbox) {
     var checkboxes = document.getElementsByName('check')
@@ -65,18 +58,16 @@ function traer(){
 function tabla(datos)
 {
     var contadorTr =0;
-    var contadorTh = 7;
     for (let valor of datos) {
         datosFrontEnd.innerHTML +=
         `
-        <tr id="${contadorTr}">
-            <th id="${contadorTh}"  class="primer">${valor.Descripción}</th>
+        <tr id="${contadorTr} "name="filas">
+            <th class="descripcion"  name="descripcion">${valor.Descripción}</th>
             <th>${valor.Estado}</th>
             <th>${valor.Fecha}</th>
-            <th><input type="checkbox" class="${contadorTr}" name="check" onclick="onlyOne(this)"></th>
+            <th><input type="checkbox"  name="check" onclick="onlyOne(this)"></th>
          </tr>  
         `
-        contadorTh++;
         contadorTr++;
     }
 }
