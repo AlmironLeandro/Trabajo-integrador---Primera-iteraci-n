@@ -1,4 +1,3 @@
-
 var datosFrontEnd = document.querySelector("#datos_atraer");
 var nueva_solicitud = document.getElementById("nueva_solicitud");
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
@@ -7,6 +6,11 @@ var botonEnviar = document.getElementById("enviar");
 var menu = document.querySelector(".menuDesplegable");
 var habilitarMenuNuevaSolicitudes = document.querySelector(".isNuevaSolicitud");
 
+function salir()
+{
+
+    window.location.href = "../index.html";
+}
 function habilitarMenuNuevaSolicitud()
 {
     habilitarMenuNuevaSolicitudes.classList.toggle("isNuevaSolicitud");
