@@ -1,21 +1,42 @@
-// var f = new Date();
-// document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+
 var datosFrontEnd = document.querySelector("#datos_atraer");
 var nueva_solicitud = document.getElementById("nueva_solicitud");
-var nuevaSolicitud = nuevaSolicitud();
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
 var eliminarSolicitud = document.getElementById("eliminar_solicitud");
 var botonEnviar = document.getElementById("enviar");
 var menu = document.querySelector(".menuDesplegable");
+var habilitarMenuNuevaSolicitudes = document.querySelector(".isNuevaSolicitud");
 
+function habilitarMenuNuevaSolicitud()
+{
+    habilitarMenuNuevaSolicitudes.classList.toggle("isNuevaSolicitud");
+    habilitarMenuNuevaSolicitudes.classList.toggle("prueba");
+}
+function nuevaSolicitud()
+{
+    var numeroDeFilas = document.getElementsByName('descripcion').length;
+    datosFrontEnd.innerHTML +=
+    `
+    <tr id="${document.getElementsByName('descripcion').length} "name="filas">
+        <th class="descripcion"  name="descripcion">${document.querySelector("#textoNuevaSolicitud").value}</th>
+        <th>${false}</th>
+        <th>${hora.innerHTML}</th>
+        <th><input type="checkbox"  name="check" onclick="onlyOne(this)"></th>
+     </tr>  
+    `;
+        if(document.getElementsByName('descripcion').length!==numeroDeFilas)
+        {borrarTexto("#textoNuevaSolicitud");habilitarMenuNuevaSolicitud()}
+    
+}
 
 function  habilitarMenu()
 {
-    menu.classList.toggle("menuDesplegable");;
+    menu.classList.toggle("menuDesplegable");
+    menu.classList.toggle("prueba");
 }
-function borrarTexto()
+function borrarTexto(id)
 {
-    texto = "";
+    document.querySelector(id).value = ``
 }
 function botonEliminar()
 {
@@ -28,18 +49,17 @@ function botonEliminar()
             }
     }
 }
-//TODO:Podria hace otro funcion en la que desactivo en darle al boton enviar, el menu(pasale al boton la
-//funcion con onClick="desde el html")
  function modificarSolicitudes()
 {
+    
     var descripcion = document.getElementsByName('descripcion');
     var checkboxes = document.getElementsByName('check');
     for (let i = 0; i <  checkboxes.length; i++) {
         if(checkboxes[i].checked)
             {
                 var textoViejo = descripcion[i].value;
-                    descripcion[i].innerHTML=`${document.querySelector("textarea").value}`
-                        if(textoViejo!==descripcion[i]){habilitarMenu()}
+                    descripcion[i].innerHTML=`${document.querySelector("#textoSolicitud").value}`
+                        if(textoViejo!==descripcion[i]){borrarTexto("#textoSolicitud");habilitarMenu();}
             }
     }
 }
@@ -50,11 +70,7 @@ function onlyOne(checkbox) {
         if (item !== checkbox) item.checked = false
     })
 }
-function nuevaSolicitud(){
-    nueva_solicitud.addEventListener("click", function(){
-        window.location = "nueva_solicitud/index.html"
-    })
-}
+
 function traer(){
       fetch('index.json')
       .then(res => res.json())
@@ -79,3 +95,18 @@ function tabla(datos)
         contadorTr++;
     }
 }
+//NUEVA SOLICITUD
+var hora = document.getElementById("fecha");
+function showTime(){
+    myDate = new Date();
+    dia = myDate.getDate();
+    mes = myDate.getMonth()+1;
+    año = myDate.getFullYear();
+    if (dia < 10) dia = 0 + dia;
+    if (mes < 10) mes = "0" + mes;
+    if (año < 10) año = "0" + año;
+    hora.innerHTML =`${dia}/${mes}/${año}`;
+    setTimeout("showTime()", 5000);
+    
+}
+showTime();

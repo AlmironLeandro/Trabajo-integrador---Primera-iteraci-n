@@ -1,5 +1,10 @@
 @import "../index.css";
 
+.prueba
+{
+    transition: opacity 1s, transform 1s;
+    transition: all 1s ease-in-out;
+}
 
 .inicio
 {
@@ -137,6 +142,7 @@ tbody > tr {
     top: 18%;
     background: #C4C4C4;
     border-radius: 10px;
+    border-color:rosybrown;
 }
 #enviar
 {
@@ -147,14 +153,7 @@ tbody > tr {
     height:10% ;
     left: 42%;
 }
-textarea
-{
-    position: relative;
-    width: 60%;
-    height: 60%;
-    left: 20%;
-    box-shadow: none;
-}
+/* MENU modificar solicitud */
 .menuDesplegable 
 {
    
@@ -162,4 +161,86 @@ textarea
         opacity: 0.0;
     
     
+}
+/* MENU nueva solicitud */
+.isNuevaSolicitud
+{
+    pointer-events: none;
+    opacity: 0.0;
+}
+.nuevaSolicitud
+{
+    position: absolute;
+    top:39%;
+    width: 70%;
+    height: 57%;
+    left: 14%;
+    background-color:white;
+    border-radius: 10px;
+    border: 1px solid #B4B0B0;
+
+}
+#imagenMenu
+{
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    top: 20%;
+    left: 30%;
+    opacity: 15%;
+    border-radius: 0px 0px 200px 200px;
+    pointer-events: none;
+    
+}
+#textoNuevaSolicitud
+{
+    position: relative;
+    width: 60%;
+    height: 60%;
+    left: 20%;
+    top: 2%;
+    resize: none;
+    box-shadow: none;
+    
+}
+h4,h2,h3{
+    display: inline-block;
+}
+h4{
+    position: relative;
+    left: 20%;
+    font-size: 120%;
+}
+h2, h3{
+    left: 40%;
+    position: relative;
+}
+h2{
+    color: red;
+}
+#enviarSolicitud
+{
+    position: absolute;
+    width: 25%;
+    height: 10%;
+    left: 37%;
+    top: 85%;
+    background: rgba(154, 200, 128, 0.99);
+    border: 1px solid #B4B0B0;
+    box-sizing: border-box;
+    border-radius: 50px;
+    /*Config font*/
+    color: #FFFFFF; 
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+#enviarSolicitud:hover
+{
+    transition: 2s;
+    background: orangered;
+    color:black;
+    font-size: 100%;
 }
