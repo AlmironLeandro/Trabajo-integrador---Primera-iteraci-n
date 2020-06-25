@@ -8,6 +8,15 @@ var eliminarSolicitud = document.getElementById("eliminar_solicitud");
 var botonEnviar = document.getElementById("enviar");
 var menu = document.querySelector(".menuDesplegable");
 
+
+function  habilitarMenu()
+{
+    menu.classList.toggle("menuDesplegable");;
+}
+function borrarTexto()
+{
+    texto = "";
+}
 function botonEliminar()
 {
     var checkboxes = document.getElementsByName('check');
@@ -19,19 +28,18 @@ function botonEliminar()
             }
     }
 }
+//TODO:Podria hace otro funcion en la que desactivo en darle al boton enviar, el menu(pasale al boton la
+//funcion con onClick="desde el html")
  function modificarSolicitudes()
 {
+    var descripcion = document.getElementsByName('descripcion');
     var checkboxes = document.getElementsByName('check');
     for (let i = 0; i <  checkboxes.length; i++) {
-        var descripcion = document.getElementsByName('descripcion');
         if(checkboxes[i].checked)
             {
-                menu.classList.toggle("menuDesplegable")
-                let texto = document.getElementById("textoSolicitud").value;
-                botonEnviar.addEventListener("click", 
-                function(){ 
-                    {(descripcion[i].innerHTML=`${texto}`)} 
-                    menu.classList.toggle("menuDesplegable")})
+                var textoViejo = descripcion[i].value;
+                    descripcion[i].innerHTML=`${document.querySelector("textarea").value}`
+                        if(textoViejo!==descripcion[i]){habilitarMenu()}
             }
     }
 }

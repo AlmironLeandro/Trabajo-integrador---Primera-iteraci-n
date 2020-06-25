@@ -20,7 +20,7 @@
     </div>
     <div class="barraDeBotones">
         <button class="hoverButton" id="nueva_solicitud">Nueva solicitud</button>
-        <button id="modificar_solicitud" onclick="modificarSolicitudes()">Modificar solicitud</button>
+        <button id="modificar_solicitud" onclick="habilitarMenu()" >Modificar solicitud</button>
         <button id="eliminar_solicitud"  onclick="botonEliminar()">Eliminar solicitud</button>
     </div>
     <div class="tablaSolicitudes">
@@ -43,7 +43,7 @@
     </div>
     <div class="menuDesplegable">
         <textarea id="textoSolicitud" name="w3review" placeholder="solicitud a cambiar"></textarea>
-        <input id="enviar" type="submit" value="Guardar">
+        <input id="enviar" type="submit" value="Guardar" onclick="modificarSolicitudes()">
     </div>
           
         
