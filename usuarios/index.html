@@ -23,9 +23,9 @@
             <button id="modificar_usuario" onclick="habilitarMenu()" >Modificar usuario</button>
             <button id="eliminar_usuario"  onclick="botonEliminar()">Eliminar usuario</button>
         </div>
-        <div class="tablaSolicitudes">
+        <div class="tablaUsuarios">
             <img src="../imagenes/0.png">
-            <table id="tablaSolicitudes">
+            <table id="tablaUsuarios">
                 <thead>
                     <tr>
                         <th>Avatar</th>
@@ -43,11 +43,9 @@
         </div>
         <div class="isNuevoUsuario">            
             <div class="nuevoUsuario">
-                    <h4 class="solicitud">Nueva usuario</h1>
-                    <h3 >Fecha de emision:</h1>
-                    <h2 id="fecha"></h1>
+                    <h2 class="solicitud">Nuevo usuario</h1>
                             <textarea id="textoNuevoUsuario"  placeholder="Detalle"></textarea>
-                            <img id="imagenMenu"src="../../imagenes/0.png">
+                            <img id="imagenMenu"src="../imagenes/0.png">
                             <input id="enviarUsuario" type="submit" value="Enviar" onclick="nuevaSolicitud()">
             </div>
         </div>
@@ -58,7 +56,6 @@
         </div>
             
             
-        <script src="https://cdn.jsdelivr.net/npm/jdenticon@2.2.0" async></script>
         <script src="index.js"></script>
     </body>
     </html>

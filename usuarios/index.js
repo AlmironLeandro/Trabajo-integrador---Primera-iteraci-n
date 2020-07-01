@@ -1,4 +1,5 @@
-import("https://cdn.jsdelivr.net/npm/jdenticon@2.2.0")
+
+
 var datosFrontEnd = document.querySelector("#datos_atraer_usuarios");
 var nuevo_usuario = document.getElementById("nuevo_usuario");
 var checkbox = document.querySelectorAll('input[type=checkbox]'); 
@@ -24,14 +25,14 @@ function nuevaSolicitud()
     datosFrontEnd.innerHTML +=
     `
     <tr id="${document.getElementsByName('descripcion').length} "name="filas">
-        <th class="descripcion"  name="descripcion">${document.querySelector("#textoNuevaSolicitud").value}</th>
+        <th><svg width="20" height="20" data-jdenticon-value="user127"></svg></th>
+        <th class="descripcion"  name="descripcion">${document.querySelector("#textoNuevoUsuario").value}</th>
         <th>${false}</th>
-        <th>${hora.innerHTML}</th>
         <th><input type="checkbox"  name="check" onclick="onlyOne(this)"></th>
      </tr>  
     `;
         if(document.getElementsByName('descripcion').length!==numeroDeFilas)
-        {borrarTexto("#textoNuevaSolicitud");habilitarMenuNuevaSolicitud()}
+        {borrarTexto("#textoNuevoUsuario");habilitarMenuNuevaSolicitud()}
     
 }
 
@@ -101,18 +102,3 @@ function tabla(datos)
         contadorTr++;
     }
 }
-//NUEVA SOLICITUD
-var hora = document.getElementById("fecha");
-function showTime(){
-    myDate = new Date();
-    dia = myDate.getDate();
-    mes = myDate.getMonth()+1;
-    año = myDate.getFullYear();
-    if (dia < 10) dia = 0 + dia;
-    if (mes < 10) mes = "0" + mes;
-    if (año < 10) año = "0" + año;
-    hora.innerHTML =`${dia}/${mes}/${año}`;
-    setTimeout("showTime()", 5000);
-    
-}
-showTime();
