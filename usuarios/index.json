@@ -1,0 +1,17 @@
+[
+    {
+        "Avatar":"",
+        "Nombre":"Luciano",
+        "Activo":true
+    },
+    {
+        "Avatar":"",
+        "Nombre":"Jorge",
+        "Activo":false
+    },
+    {
+        "Avatar":"",
+        "Nombre":"Leandro",
+        "Activo":false
+    }
+]

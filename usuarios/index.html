@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cambiarSolicitud.css">
+    <title>Solicitudes</title>
+</head>
+    <body onload="traer()">
+        <img class="inicio" src="../imagenes/background.jpeg">
+        <div class="barra">
+            <img src="../imagenes/0.png">
+            <h1>Depatamento de acompañamiento de alumnos</h1>
+            <div >
+                <button class="salir" onclick="salir()" > Salir</button>
+            </div>
+        </div>
+        <div class="barraDeBotones">
+            
+            <button id="nuevo_usuario" onclick="habilitarMenuNuevaSolicitud()">Nuevo usuario</button>
+            <button id="modificar_usuario" onclick="habilitarMenu()" >Modificar usuario</button>
+            <button id="eliminar_usuario"  onclick="botonEliminar()">Eliminar usuario</button>
+        </div>
+        <div class="tablaSolicitudes">
+            <img src="../imagenes/0.png">
+            <table id="tablaSolicitudes">
+                <thead>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>Nombre</th>
+                        <th>Activo</th>
+                        <th><!-- CHECKBOX --></th>
+                    </tr>  
+                </thead>  
+                <tbody id="datos_atraer_usuarios">
+                    <tr >
+                
+                    </tr>
+                </tbody>        
+            </table>
+        </div>
+        <div class="isNuevoUsuario">            
+            <div class="nuevoUsuario">
+                    <h4 class="solicitud">Nueva usuario</h1>
+                    <h3 >Fecha de emision:</h1>
+                    <h2 id="fecha"></h1>
+                            <textarea id="textoNuevoUsuario"  placeholder="Detalle"></textarea>
+                            <img id="imagenMenu"src="../../imagenes/0.png">
+                            <input id="enviarUsuario" type="submit" value="Enviar" onclick="nuevaSolicitud()">
+            </div>
+        </div>
+        
+        <div class="menuDesplegableUsuario">
+            <textarea id="textoSolicitud" name="editarTexto" placeholder="solicitud a cambiar"></textarea>
+            <input id="enviar" type="submit" value="Guardar" onclick="modificarSolicitudes()">
+        </div>
+            
+            
+        <script src="https://cdn.jsdelivr.net/npm/jdenticon@2.2.0" async></script>
+        <script src="index.js"></script>
+    </body>
+    </html>

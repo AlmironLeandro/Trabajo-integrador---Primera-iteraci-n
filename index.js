@@ -32,7 +32,7 @@ function validarUsuario(){
 
 function isUsuarioAceptado(){
     if(validarUsuario()){
-            return  document.getElementById("myForm").action = "Mis_solicitudes/index.html" 
+            return  document.getElementById("myForm").action = "Menu/index.html" 
     }
     else
     {
