@@ -7,25 +7,14 @@ var eliminarSolicitud = document.getElementById("eliminar_usuario");
 var botonEnviar = document.getElementById("enviar");
 var menu = document.querySelector(".menuDesplegableUsuario");
 var habilitarMenuNuevaSolicitudes = document.querySelector(".isNuevoUsuario"); 
-var misImagenes= new Array(3)
-    misImagenes [0]= "../imagenes/avatars/1.png";
-    misImagenes [1]= "../imagenes/avatars/2.png";
-    misImagenes [2]= "../imagenes/avatars/3.png";
-    misImagenes [3]= "../imagenes/avatars/4.png";
-    misImagenes [4]= "../imagenes/avatars/5.png";
-    misImagenes [5]= "../imagenes/avatars/6.png";
-    misImagenes [6]= "../imagenes/avatars/7.png";
-    misImagenes [7]= "../imagenes/avatars/8.png";
-    misImagenes [8]= "../imagenes/avatars/9.png";
-    misImagenes [9]= "../imagenes/avatars/10.png";
-    misImagenes [10]= "../imagenes/avatars/11.png";
-    misImagenes [11]= "../imagenes/avatars/12.png";
-    misImagenes [12]= "../imagenes/avatars/13.png";
-    misImagenes [13]= "../imagenes/avatars/14.png";
-    misImagenes [14]= "../imagenes/avatars/15.png";
-    misImagenes [15]= "../imagenes/avatars/16.png";
-
-
+var misImagenes=[]
+function cargarImg()
+{
+    for (let index = 0; index < 16; index++) {
+        misImagenes.push(`../imagenes/avatars/${index+1}.png`)
+    }
+    
+}
 function salir()
 
 {
@@ -122,3 +111,5 @@ function tabla(datos)
         contadorTr++;
     }
 }
+cargarImg()
+console.log(misImagenes)
