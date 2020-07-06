@@ -44,7 +44,7 @@ function nuevaSolicitud()
     datosFrontEnd.innerHTML +=
     `
     <tr id="${document.getElementsByName('descripcion').length} "name="filas">
-        <th><img width="40" height="40" src="${misImagenes[Math.round(Math.random()*16)]}"></img></th>
+        <th><img width="40" height="40" src="${misImagenes[Math.round(Math.random()*15)]}"></img></th>
         <th class="descripcion"  name="descripcion">${document.querySelector("#textoNuevoUsuario").value}</th>
         <th>${false}</th>
         <th><input type="checkbox"  name="check" onclick="onlyOne(this)"></th>
@@ -113,7 +113,7 @@ function tabla(datos)
         datosFrontEnd.innerHTML +=
         `
         <tr id="${contadorTr} "name="filas">
-            <th  ><img width="40" height="40" src="${misImagenes[Math.round(Math.random()*16)]}"></svg></th>
+            <th  ><img width="40" height="40" src="${misImagenes[Math.round(Math.random()*15)]}"></svg></th>
             <th class="descripcion" name="descripcion">${valor.Nombre}</th>
             <th>${valor.Activo}</th>
             <th><input type="checkbox"  name="check" onclick="onlyOne(this)"></th>
